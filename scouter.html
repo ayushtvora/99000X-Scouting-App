@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scouter | 99000X Scouting App</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h1>Enter Information about the Opposing Teams Here:</h1>
+
+    <label for="match">Match #:</label>
+    <input type="number" name="match" id="match">
+        <br>
+    Opponent Teams:
+    <label for="opponent1">Team 1</label>
+    <input type="text" name="opponent" id="opponent1">
+    <label for="opponent2">Team 2</label>
+    <input type="text" name="opponent" id="opponent2">
+        <br>
+    Team Side:
+    <input type="radio" name="blueSide" id="blueSide">
+    <label for="blueSide">Blue</label>
+    <input type="radio" name="redSide" id="redSide">
+    <label for="redSide">Red</label>
+        <br>
+    Cube Focus Colour:
+    <input type="radio" name="orangeFocus" id="orangeFocus">
+    <label for="orangeFocus">Orange</label>
+    <input type="radio" name="greenFocus" id="greenFocus">
+    <label for="greenFocus">Green</label>
+    <input type="radio" name="purpleFocus" id="purpleFocus">
+    <label for="purpleFocus">Purple</label>
+    <input type="radio" name="noFocus" id="noFocus">
+    <label for="noFocus">Mixed</label>
+        <br>
+    <label for="greenCount">Green Cube Count</label>
+    <input type="number" name="greenCount" id="greenCount">
+        <br>
+    <label for="orangeCount">Orange Cube Count</label>
+    <input type="number" name="orangeCount" id="orangeCount">
+        <br>
+    <label for="purpleCount">Purple Cube Count</label>
+    <input type="number" name="purpleCount" id="purpleCount">
+        <br>
+    <label for="maxStack">Highest Stack: </label>
+    <input type="number" name="maxStack" id="maxStack">
+        <br>
+    <label for="autonPoints">Autonomous Points: </label>
+    <input type="number" name="autonPoints" id="autonPoints">
+        <br>
+    <label for="score">Final Score: </label>
+    <input type="number" name="score" id="score">
+
+    <button onclick="calculate()">Complete</button>
+</body>
+</html>
