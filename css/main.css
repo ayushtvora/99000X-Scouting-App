@@ -8,13 +8,13 @@ body {
 }
 
 h1, h2 {
-    color: red;
+    color: #F20505;
     text-align: center;
     font-family: "Oxanium", Arial, sans-serif;
 }
 
 h3 {
-    color: red;
+    color: #F20505;
     font-family: "Oxanium", Arial, sans-serif;
 }
 
@@ -29,7 +29,7 @@ img {
 
 form {
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Open Sans", Arial, sans-serif;
 
 }
@@ -41,7 +41,6 @@ p {
 
 input[type=number], input[type=text], select {
     margin-top: 1%;
-    margin-bottom: 1%;
     font-family: "Open Sans", Arial, sans-serif;
 }
 
@@ -51,7 +50,7 @@ input[type=number], input[type=text], select {
     padding: 14px 40px;
     color: whitesmoke;
     border: 2px solid #D90416;
-    margin: 5% 2%;
+    margin: 2% 2%;
     font-family: "Oxanium", Arial, sans-serif;
 }
 
@@ -61,6 +60,22 @@ input[type=number], input[type=text], select {
     text-align:center;
 }
 
+.tabs {
+    text-align: center;
+}
+
+.material-icons {
+    color: #F20505;
+    font-size: 48px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.material-icons.current {
+    color: #8C0303;
+}
+
 #comments {
     width: 50%;
 }
+
