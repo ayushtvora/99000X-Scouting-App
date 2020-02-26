@@ -4,58 +4,62 @@
     <meta charset="UTF-8">
     <title>Scouter | 99000X Scouting App</title>
     <script src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <h1>Scouter</h1>
-
-    <label for="match">Match #:</label>
-    <input type="number" name="match" id="match">
+    <form>
+        <label for="match">Match #:</label>
+        <input type="number" name="match" id="match">
         <br>
-    <label for="team">Opponent Team: </label>
-    <input type="text" name="team" id="team">
+        <label for="team">Opponent Team: </label>
+        <input type="text" name="team" id="team">
         <br>
-    <label for="side">Team Side: </label>
-    <select id="side">
-        <option value="Blue">Blue</option>
-        <option value="Red">Red</option>
-    </select>
+        <label for="side">Team Side: </label>
+        <select id="side">
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+        </select>
         <br>
-    <label for="auton">Autonomous Points: </label>
-    <input type="number" name="auton" id="auton">
+        <label for="auton">Autonomous Points: </label>
+        <input type="number" name="auton" id="auton">
         <br>
-    <label for="maxStack">Average Stack Height: </label>
-    <input type="number" name="maxStack" id="maxStack">
+        <label for="maxStack">Average Stack Height: </label>
+        <input type="number" name="maxStack" id="maxStack">
         <br>
-    <label for="stackTime">Average Time for 1 Stack (s): </label>
-    <input type="number" name="stackTime" id="stackTime">
+        <label for="stackTime">Average Time for 1 Stack (s): </label>
+        <input type="number" name="stackTime" id="stackTime">
         <br>
-    <label for="greenCount">Green Cube Count</label>
-    <input type="number" name="greenCount" id="greenCount">
+        <label for="greenCount">Green Cube Count</label>
+        <input type="number" name="greenCount" id="greenCount">
         <br>
-    <label for="orangeCount">Orange Cube Count</label>
-    <input type="number" name="orangeCount" id="orangeCount">
+        <label for="orangeCount">Orange Cube Count</label>
+        <input type="number" name="orangeCount" id="orangeCount">
         <br>
-    <label for="purpleCount">Purple Cube Count</label>
-    <input type="number" name="purpleCount" id="purpleCount">
+        <label for="purpleCount">Purple Cube Count</label>
+        <input type="number" name="purpleCount" id="purpleCount">
         <br>
-    <label for="towerTime">Average Time for 1 Tower (s): </label>
-    <input type="number" name="towerTime" id="towerTime">
+        <label for="towerTime">Average Time for 1 Tower (s): </label>
+        <input type="number" name="towerTime" id="towerTime">
         <br>
-    <label for="greenTowerCount">Green Tower Count</label>
-    <input type="number" name="greenTowerCount" id="greenTowerCount">
+        <label for="greenTowerCount">Green Tower Count</label>
+        <input type="number" name="greenTowerCount" id="greenTowerCount">
         <br>
-    <label for="orangeTowerCount">Orange Tower Count</label>
-    <input type="number" name="orangeTowerCount" id="orangeTowerCount">
+        <label for="orangeTowerCount">Orange Tower Count</label>
+        <input type="number" name="orangeTowerCount" id="orangeTowerCount">
         <br>
-    <label for="purpleTowerCount">Purple Tower Count</label>
-    <input type="number" name="purpleTowerCount" id="purpleTowerCount">
+        <label for="purpleTowerCount">Purple Tower Count</label>
+        <input type="number" name="purpleTowerCount" id="purpleTowerCount">
         <br>
-    <label for="score">Final Score: </label>
-    <input type="number" name="score" id="score">
+        <label for="score">Final Score: </label>
+        <input type="number" name="score" id="score">
         <br>
-    <label for="comments">Comments: </label>
-    <input type="text" name="comments" id="comments">
+        <label for="comments">Comments: </label>
+        <input type="text" name="comments" id="comments">
         <br>
-    <button onclick="calculate()">Complete</button>
+    </form>
+    <button class=button onclick="calculate()">Complete</button>
 </body>
 </html>
