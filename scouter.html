@@ -11,27 +11,23 @@
     <label for="match">Match #:</label>
     <input type="number" name="match" id="match">
         <br>
-    Opponent Teams:
-    <label for="opponent1">Team 1</label>
-    <input type="text" name="opponent" id="opponent1">
-    <label for="opponent2">Team 2</label>
-    <input type="text" name="opponent" id="opponent2">
+    <label for="team">Opponent Team: </label>
+    <input type="text" name="team" id="team">
         <br>
-    Team Side:
-    <input type="radio" name="blueSide" id="blueSide">
-    <label for="blueSide">Blue</label>
-    <input type="radio" name="redSide" id="redSide">
-    <label for="redSide">Red</label>
+    <label for="side">Team Side: </label>
+    <select id="side">
+        <option value="Blue">Blue</option>
+        <option value="Red">Red</option>
+    </select>
         <br>
-    Cube Focus Colour:
-    <input type="radio" name="orangeFocus" id="orangeFocus">
-    <label for="orangeFocus">Orange</label>
-    <input type="radio" name="greenFocus" id="greenFocus">
-    <label for="greenFocus">Green</label>
-    <input type="radio" name="purpleFocus" id="purpleFocus">
-    <label for="purpleFocus">Purple</label>
-    <input type="radio" name="noFocus" id="noFocus">
-    <label for="noFocus">Mixed</label>
+    <label for="auton">Autonomous Points: </label>
+    <input type="number" name="auton" id="auton">
+        <br>
+    <label for="maxStack">Average Stack Height: </label>
+    <input type="number" name="maxStack" id="maxStack">
+        <br>
+    <label for="stackTime">Average Time for 1 Stack (s): </label>
+    <input type="number" name="stackTime" id="stackTime">
         <br>
     <label for="greenCount">Green Cube Count</label>
     <input type="number" name="greenCount" id="greenCount">
@@ -42,15 +38,15 @@
     <label for="purpleCount">Purple Cube Count</label>
     <input type="number" name="purpleCount" id="purpleCount">
         <br>
-    <label for="maxStack">Highest Stack: </label>
-    <input type="number" name="maxStack" id="maxStack">
-        <br>
-    <label for="autonPoints">Autonomous Points: </label>
-    <input type="number" name="autonPoints" id="autonPoints">
+    <label for="towerTime">Average Time for 1 Tower (s): </label>
+    <input type="number" name="towerTime" id="towerTime">
         <br>
     <label for="score">Final Score: </label>
     <input type="number" name="score" id="score">
-
+        <br>
+    <label for="comments">Comments: </label>
+    <input type="text" name="comments" id="comments">
+        <br>
     <button onclick="calculate()">Complete</button>
 </body>
 </html>
