@@ -4,19 +4,15 @@ function calculate() {
         setArrays()
     }
 
-    let matchList = JSON.parse(localStorage.getItem("matchList")),
-        teamList = JSON.parse(localStorage.getItem("teamList")),
-        sideList = JSON.parse(localStorage.getItem("sideList")),
-        autonPointsList = JSON.parse(localStorage.getItem("autonPointsList")),
-        maxStackList = JSON.parse(localStorage.getItem("maxStackList")),
-        stackTimeList = JSON.parse(localStorage.getItem("stackTimeList")),
-        greenCountList = JSON.parse(localStorage.getItem("greenCountList")),
-        orangeCountList = JSON.parse(localStorage.getItem("orangeCountList")),
-        purpleCountList = JSON.parse(localStorage.getItem("purpleCountList")),
-        towerTimeList = JSON.parse(localStorage.getItem("towerTimeList")),
-        scoreList = JSON.parse(localStorage.getItem("scoreList")),
-        commentsList = JSON.parse(localStorage.getItem("commentsList"));
-        //TODO: ADD PREDICTIONS
+    let teamList = JSON.parse(localStorage.getItem("teamList")),
+        matchList = JSON.parse(localStorage.getItem("matchList")),
+        prediction1List = JSON.parse(localStorage.getItem("prediction1List")),
+        prediction2List = JSON.parse(localStorage.getItem("prediction2List")),
+        prediction3List = JSON.parse(localStorage.getItem("prediction3List")),
+        prediction4List = JSON.parse(localStorage.getItem("prediction4List")),
+        prediction5List = JSON.parse(localStorage.getItem("prediction5List")),
+        prediction6List = JSON.parse(localStorage.getItem("prediction6List")),
+        prediction7List = JSON.parse(localStorage.getItem("prediction7List"));
 
     let match = document.getElementById("match").value,
         team = document.getElementById("team").value,
@@ -28,6 +24,9 @@ function calculate() {
         orangeCount = document.getElementById("orangeCount").value,
         purpleCount = document.getElementById("purpleCount").value,
         towerTime = document.getElementById("towerTime").value,
+        greenTowerCount = document.getElementById("greenTowerCount").value,
+        orangeTowerCount = document.getElementById("orangeTowerCount").value,
+        purpleTowerCount = document.getElementById("purpleTowerCount").value,
         score = document.getElementById("score").value,
         comments = document.getElementById("comments").value;
 
@@ -42,47 +41,37 @@ function calculate() {
         focus = "None"
     }
 
-    let prediction1, prediction2, prediction3, prediction4, prediction5, prediction6;
+    let prediction1, prediction2, prediction3, prediction4, prediction5, prediction6, prediction7;
     prediction1 = Prediction1(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime));
     prediction2 = Prediction2(side, focus);
     prediction3 = Prediction3(parseInt(orangeCount), parseInt(greenCount), parseInt(purpleCount), focus);
     prediction4 = Prediction4(parseInt(auton));
     prediction5 = Prediction5(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), parseInt(score));
-    prediction6 = Prediction6(comments);
+    prediction6 = Prediction6(parseInt(orangeTowerCount), parseInt(greenTowerCount), parseInt(purpleTowerCount));
+    prediction7 = Prediction7(comments);
 
 
-    matchList.push(match);
     teamList.push(team);
-    sideList.push(side);
-    autonPointsList.push(auton);
-    maxStackList.push(maxStack);
-    stackTimeList.push(stackTime);
-    greenCountList.push(greenCount);
-    orangeCountList.push(orangeCount);
-    purpleCountList.push(purpleCount);
-    towerTimeList.push(towerTime);
-    scoreList.push(score);
-    commentsList.push(comments);
+    matchList.push(match);
+    prediction1List.push(prediction1);
+    prediction2List.push(prediction2);
+    prediction3List.push(prediction3);
+    prediction4List.push(prediction4);
+    prediction5List.push(prediction5);
+    prediction6List.push(prediction6);
+    prediction7List.push(prediction7);
 
-    localStorage.setItem("matchList", JSON.stringify(matchList));
     localStorage.setItem("teamList", JSON.stringify(teamList));
-    localStorage.setItem("sideList", JSON.stringify(sideList));
-    localStorage.setItem("autonPointsList", JSON.stringify(autonPointsList));
-    localStorage.setItem("maxStackList", JSON.stringify(maxStackList));
-    localStorage.setItem("stackTimeList", JSON.stringify(stackTimeList));
-    localStorage.setItem("greenCountList", JSON.stringify(greenCountList));
-    localStorage.setItem("orangeCountList", JSON.stringify(orangeCountList));
-    localStorage.setItem("purpleCountList", JSON.stringify(purpleCountList));
-    localStorage.setItem("towerTimeList", JSON.stringify(towerTimeList));
-    localStorage.setItem("scoreList", JSON.stringify(scoreList));
-    localStorage.setItem("commentsList", JSON.stringify(commentsList));
+    localStorage.setItem("matchList", JSON.stringify(matchList));
+    localStorage.setItem("prediction1List", JSON.stringify(prediction1List));
+    localStorage.setItem("prediction2List", JSON.stringify(prediction2List));
+    localStorage.setItem("prediction3List", JSON.stringify(prediction3List));
+    localStorage.setItem("prediction4List", JSON.stringify(prediction4List));
+    localStorage.setItem("prediction5List", JSON.stringify(prediction5List));
+    localStorage.setItem("prediction6List", JSON.stringify(prediction6List));
+    localStorage.setItem("prediction7List", JSON.stringify(prediction7List));
 
-    alert(prediction1);
-    alert(prediction2);
-    alert(prediction3);
-    alert(prediction4);
-    alert(prediction5);
-    alert(prediction6);
+    alert("Success! Go to the Strategies Page for the Results.")
 }
 
 /**
@@ -168,7 +157,15 @@ function Prediction5(m, tStack, tTower, score) {
 /**
  * @return {string}
  */
-function Prediction6(comments) {
+function Prediction6(o, g, p) {
+    let total = o + g + p;
+    return "During the match, the team had ".concat(total.toString(), " towers. From them, ", o.toString(), " were orange, ", g.toString(), " were green, and ", p.toString(), " were purple. ")
+}
+
+/**
+ * @return {string}
+ */
+function Prediction7(comments) {
     if (comments === "") {
         return "There are no additional comments.";
     } else {
@@ -177,16 +174,39 @@ function Prediction6(comments) {
 }
 
 function setArrays() {
-    localStorage.setItem("matchList", "[]");
     localStorage.setItem("teamList", "[]");
-    localStorage.setItem("sideList", "[]");
-    localStorage.setItem("autonPointsList", "[]");
-    localStorage.setItem("maxStackList", "[]");
-    localStorage.setItem("stackTimeList", "[]");
-    localStorage.setItem("greenCountList", "[]");
-    localStorage.setItem("orangeCountList", "[]");
-    localStorage.setItem("purpleCountList", "[]");
-    localStorage.setItem("towerTimeList", "[]");
-    localStorage.setItem("scoreList", "[]");
-    localStorage.setItem("commentsList", "[]");
+    localStorage.setItem("matchList", "[]");
+    localStorage.setItem("prediction1List", "[]");
+    localStorage.setItem("prediction2List", "[]");
+    localStorage.setItem("prediction3List", "[]");
+    localStorage.setItem("prediction4List", "[]");
+    localStorage.setItem("prediction5List", "[]");
+    localStorage.setItem("prediction6List", "[]");
+    localStorage.setItem("prediction7List", "[]");
+}
+
+function strategies() {
+    let teamList = JSON.parse(localStorage.getItem("teamList")),
+        matchList = JSON.parse(localStorage.getItem("matchList")),
+        prediction1List = JSON.parse(localStorage.getItem("prediction1List")),
+        prediction2List = JSON.parse(localStorage.getItem("prediction2List")),
+        prediction3List = JSON.parse(localStorage.getItem("prediction3List")),
+        prediction4List = JSON.parse(localStorage.getItem("prediction4List")),
+        prediction5List = JSON.parse(localStorage.getItem("prediction5List")),
+        prediction6List = JSON.parse(localStorage.getItem("prediction6List")),
+        prediction7List = JSON.parse(localStorage.getItem("prediction7List")),
+        strategyView = "";
+
+    for (let i = 0; i < teamList.length; i++) {
+        strategyView += "<h3>" + teamList[i] + " (Q" + matchList[i] + ")</h3>" +
+            "<ul><li>" + prediction1List[i] +
+            "</li><li>"+ prediction2List[i] +
+            "</li><li>"+ prediction3List[i] +
+            "</li><li>"+ prediction4List[i] +
+            "</li><li>"+ prediction5List[i] +
+            "</li><li>"+ prediction6List[i] +
+            "</li><li>"+ prediction7List[i] + "</li></ul>";
+    }
+
+    document.getElementById("strategyView").innerHTML = strategyView;
 }

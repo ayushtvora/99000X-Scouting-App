@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a109c326-79be-4594-95c0-0214dc2d077b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouter.html" beforeDir="false" afterPath="$PROJECT_DIR$/scouter.html" afterDir="false" />
     </list>
@@ -17,7 +16,63 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scouter.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="105" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/strategies.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="773">
+              <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#calculate#0" />
+                <element signature="e#76#103#0" />
+                <element signature="n#!!doc;n#Prediction1#0" />
+                <element signature="n#!!block;n#Prediction1#0" />
+                <element signature="n#!!doc;n#Prediction2#0" />
+                <element signature="n#!!block;n#Prediction2#0" />
+                <element signature="n#!!doc;n#Prediction3#0" />
+                <element signature="n#!!block;n#Prediction3#0" />
+                <element signature="n#!!doc;n#Prediction4#0" />
+                <element signature="n#!!block;n#Prediction4#0" />
+                <element signature="n#!!doc;n#Prediction5#0" />
+                <element signature="n#!!block;n#Prediction5#0" />
+                <element signature="n#!!doc;n#Prediction6#0" />
+                <element signature="n#!!block;n#Prediction6#0" />
+                <element signature="n#!!doc;n#Prediction7#0" />
+                <element signature="n#!!block;n#Prediction7#0" />
+                <element signature="n#!!block;n#setArrays#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,6 +96,7 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scouter.html" />
+        <option value="$PROJECT_DIR$/strategies.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
@@ -62,6 +118,11 @@
             <path>
               <item name="99000X-Scouting-App" type="b2602c69:ProjectViewProjectNode" />
               <item name="99000X-Scouting-App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="99000X-Scouting-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="99000X-Scouting-App" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -109,14 +170,16 @@
       <workItem from="1582587756091" duration="3360000" />
       <workItem from="1582597116618" duration="2160000" />
       <workItem from="1582680605485" duration="13905000" />
+      <workItem from="1582750123959" duration="3982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19425000" />
+    <option name="totallyTimeSpent" value="23407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08746049" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -143,29 +206,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="204">
+          <caret line="12" column="105" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scouter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        <state relative-caret-position="136">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="170" column="31" selection-start-line="170" selection-start-column="31" selection-end-line="170" selection-end-column="31" />
+        <state relative-caret-position="773">
+          <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
           <folding>
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#f#0" />
+            <element signature="n#!!block;n#calculate#0" />
+            <element signature="e#76#103#0" />
+            <element signature="n#!!doc;n#Prediction1#0" />
+            <element signature="n#!!block;n#Prediction1#0" />
+            <element signature="n#!!doc;n#Prediction2#0" />
+            <element signature="n#!!block;n#Prediction2#0" />
+            <element signature="n#!!doc;n#Prediction3#0" />
+            <element signature="n#!!block;n#Prediction3#0" />
+            <element signature="n#!!doc;n#Prediction4#0" />
+            <element signature="n#!!block;n#Prediction4#0" />
+            <element signature="n#!!doc;n#Prediction5#0" />
+            <element signature="n#!!block;n#Prediction5#0" />
+            <element signature="n#!!doc;n#Prediction6#0" />
+            <element signature="n#!!block;n#Prediction6#0" />
+            <element signature="n#!!doc;n#Prediction7#0" />
+            <element signature="n#!!block;n#Prediction7#0" />
             <element signature="n#!!block;n#setArrays#0" />
           </folding>
         </state>
