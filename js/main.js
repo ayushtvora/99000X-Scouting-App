@@ -231,3 +231,16 @@ function GoDown(id) {
         document.getElementById(id).value = value - 1;
     }
 }
+
+function clearStrategies() {
+    localStorage.setItem("teamList", "[]");
+    localStorage.setItem("matchList", "[]");
+    localStorage.setItem("prediction1List", "[]");
+    localStorage.setItem("prediction2List", "[]");
+    localStorage.setItem("prediction3List", "[]");
+    localStorage.setItem("prediction4List", "[]");
+    localStorage.setItem("prediction5List", "[]");
+    localStorage.setItem("prediction6List", "[]");
+    localStorage.setItem("prediction7List", "[]");
+    document.getElementById("strategyView").innerHTML = "<p>Start scouting teams to see strategies for your different teams!</p>";
+}

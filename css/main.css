@@ -48,7 +48,7 @@ input[type=number] {
     width: 50px;
 }
 
-.button {
+.button, #clearStrategies {
     background-color: #D90416;
     font-size: 24px;
     padding: 14px 40px;
