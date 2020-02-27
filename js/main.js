@@ -210,3 +210,24 @@ function strategies() {
 
     document.getElementById("strategyView").innerHTML = strategyView;
 }
+
+function GoUp(id) {
+    let value = parseInt(document.getElementById(id).value);
+
+    if (id === "greenCount" || id === "purpleCount" || id === "orangeCount") {
+        if (value != 22) {
+            document.getElementById(id).value = value + 1;
+        }
+    } else {
+        if (value != 7) {
+            document.getElementById(id).value = value + 1;
+        }
+    }
+}
+
+function GoDown(id) {
+    let value = parseInt(document.getElementById(id).value);
+    if (value != 0) {
+        document.getElementById(id).value = value - 1;
+    }
+}

@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a109c326-79be-4594-95c0-0214dc2d077b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/media/99000X Logo SQUARE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/99000X Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/99000X White.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/greencube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/greentower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/orangecube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/orangetower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/podium.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/purplecube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/purpletower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ScoutingAppRobotics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScoutingAppRobotics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ayush_Vora.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ayush_Vora.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouter.html" beforeDir="false" afterPath="$PROJECT_DIR$/scouter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strategies.html" beforeDir="false" afterPath="$PROJECT_DIR$/strategies.html" afterDir="false" />
     </list>
@@ -18,10 +37,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/strategies.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="476">
+              <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
             </state>
           </provider>
         </entry>
@@ -29,17 +57,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scouter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+            <state relative-caret-position="34">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/strategies.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="773">
+              <caret line="232" column="1" selection-start-line="232" selection-start-column="1" selection-end-line="232" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#calculate#0" />
+                <element signature="e#76#103#0" />
+                <element signature="e#1873#1905#0" />
+                <element signature="e#2010#2041#0" />
+                <element signature="e#2146#2178#0" />
+                <element signature="e#2184#2214#0" />
+                <element signature="n#!!doc;n#Prediction1#0" />
+                <element signature="n#!!block;n#Prediction1#0" />
+                <element signature="n#!!doc;n#Prediction2#0" />
+                <element signature="n#!!block;n#Prediction2#0" />
+                <element signature="e#4494#4708#0" />
+                <element signature="e#4801#5018#0" />
+                <element signature="e#5048#5140#0" />
+                <element signature="e#5146#5223#0" />
+                <element signature="n#!!doc;n#Prediction3#0" />
+                <element signature="n#!!block;n#Prediction3#0" />
+                <element signature="e#5371#5579#0" />
+                <element signature="e#5608#5815#0" />
+                <element signature="e#5845#6053#0" />
+                <element signature="e#6059#6176#0" />
+                <element signature="n#!!doc;n#Prediction4#0" />
+                <element signature="n#!!block;n#Prediction4#0" />
+                <element signature="e#6295#6358#0" />
+                <element signature="e#6364#6450#0" />
+                <element signature="n#!!doc;n#Prediction5#0" />
+                <element signature="n#!!block;n#Prediction5#0" />
+                <element signature="e#6719#6869#0" />
+                <element signature="e#6890#7037#0" />
+                <element signature="e#7043#7154#0" />
+                <element signature="n#!!doc;n#Prediction6#0" />
+                <element signature="n#!!block;n#Prediction6#0" />
+                <element signature="n#!!doc;n#Prediction7#0" />
+                <element signature="n#!!block;n#Prediction7#0" />
+                <element signature="e#7527#7586#0" />
+                <element signature="e#7592#7656#0" />
+                <element signature="n#!!block;n#setArrays#0" />
+                <element signature="n#!!block;n#strategies#0" />
+                <element signature="e#8915#9339#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -76,20 +144,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/scouter.html" />
         <option value="$PROJECT_DIR$/strategies.html" />
+        <option value="$PROJECT_DIR$/scouter.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="248" />
+    <option name="y" value="-14" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -103,6 +171,16 @@
             <path>
               <item name="99000X-Scouting-App" type="b2602c69:ProjectViewProjectNode" />
               <item name="99000X-Scouting-App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="99000X-Scouting-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="99000X-Scouting-App" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="99000X-Scouting-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="99000X-Scouting-App" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="99000X-Scouting-App" type="b2602c69:ProjectViewProjectNode" />
@@ -169,13 +247,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28673000" />
+    <option name="totallyTimeSpent" value="37018000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="976" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13171759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -198,58 +276,84 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/media/99000X White.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/99000X Logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="166" column="3" lean-forward="true" selection-start-line="166" selection-start-column="3" selection-end-line="166" selection-end-column="3" />
+        <state relative-caret-position="773">
+          <caret line="232" column="1" selection-start-line="232" selection-start-column="1" selection-end-line="232" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#calculate#0" />
             <element signature="e#76#103#0" />
+            <element signature="e#1873#1905#0" />
+            <element signature="e#2010#2041#0" />
+            <element signature="e#2146#2178#0" />
+            <element signature="e#2184#2214#0" />
             <element signature="n#!!doc;n#Prediction1#0" />
             <element signature="n#!!block;n#Prediction1#0" />
             <element signature="n#!!doc;n#Prediction2#0" />
             <element signature="n#!!block;n#Prediction2#0" />
+            <element signature="e#4494#4708#0" />
+            <element signature="e#4801#5018#0" />
+            <element signature="e#5048#5140#0" />
+            <element signature="e#5146#5223#0" />
             <element signature="n#!!doc;n#Prediction3#0" />
             <element signature="n#!!block;n#Prediction3#0" />
+            <element signature="e#5371#5579#0" />
+            <element signature="e#5608#5815#0" />
+            <element signature="e#5845#6053#0" />
+            <element signature="e#6059#6176#0" />
             <element signature="n#!!doc;n#Prediction4#0" />
             <element signature="n#!!block;n#Prediction4#0" />
+            <element signature="e#6295#6358#0" />
+            <element signature="e#6364#6450#0" />
             <element signature="n#!!doc;n#Prediction5#0" />
             <element signature="n#!!block;n#Prediction5#0" />
+            <element signature="e#6719#6869#0" />
+            <element signature="e#6890#7037#0" />
+            <element signature="e#7043#7154#0" />
             <element signature="n#!!doc;n#Prediction6#0" />
             <element signature="n#!!block;n#Prediction6#0" />
             <element signature="n#!!doc;n#Prediction7#0" />
             <element signature="n#!!block;n#Prediction7#0" />
+            <element signature="e#7527#7586#0" />
+            <element signature="e#7592#7656#0" />
             <element signature="n#!!block;n#setArrays#0" />
             <element signature="n#!!block;n#strategies#0" />
+            <element signature="e#8915#9339#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scouter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/strategies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="153">
+          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scouter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
         </state>
       </provider>
     </entry>

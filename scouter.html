@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxanium&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="media/99000X Logo SQUARE.png">
 </head>
 <body>
     <h1>Scouter</h1>
@@ -39,26 +40,86 @@
         <label for="stackTime">Average Time for 1 Stack (s): </label>
         <input type="number" name="stackTime" id="stackTime">
         <br>
-        <label for="greenCount">Green Cube Count</label>
-        <input type="number" name="greenCount" id="greenCount">
+        <div class="row">
+            <div class="column">
+                <label for="greenCount"># of Green Cubes Stacked</label>
+                <img src="media/greencube.png" height="1000" width="1000" class="cube" alt="Green Cube"/>
+                <input type="number" name="greenCount" id="greenCount" min="0" max="22" value="0">
+            </div>
+            <div class="column">
+                <label for="purpleCount"># of Purple Cubes Stacked</label>
+                <img src="media/purplecube.png" height="1000" width="1000" class="cube" alt="Purple Cube"/><br>
+                <input type="number" name="purpleCount" id="purpleCount" min="0" max="22" value="0">
+            </div>
+            <div class="column">
+                <label for="orangeCount"># of Orange Cubes Stacked</label>
+                <img src="media/orangecube.png" height="1000" width="1000" class="cube" alt="Orange Cube"/>
+                <input type="number" name="orangeCount" id="orangeCount" min="0" max="22" value="0">
+            </div>
+        </div>
         <br>
-        <label for="orangeCount">Orange Cube Count</label>
-        <input type="number" name="orangeCount" id="orangeCount">
-        <br>
-        <label for="purpleCount">Purple Cube Count</label>
-        <input type="number" name="purpleCount" id="purpleCount">
+        <div class="row">
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoDown('greenCount')">-</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoUp('greenCount')">+</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoDown('purpleCount')">-</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoUp('purpleCount')">+</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoDown('orangeCount')">-</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoUp('orangeCount')">+</button>
+            </div>
+        </div>
         <br>
         <label for="towerTime">Average Time for 1 Tower (s): </label>
         <input type="number" name="towerTime" id="towerTime">
         <br>
-        <label for="greenTowerCount">Green Tower Count</label>
-        <input type="number" name="greenTowerCount" id="greenTowerCount">
+        <div class="row">
+            <div class="column">
+                <label for="greenTowerCount">Green Tower Count</label>
+                <img src="media/greentower.png" height="1000" width="500" class="tower" alt="Green Tower"/>
+                <input type="number" name="greenTowerCount" id="greenTowerCount" min="0" max="7" value="0">
+            </div>
+            <div class="column">
+                <label for="purpleTowerCount">Purple Tower Count</label>
+                <img src="media/purpletower.png" height="1000" width="500" class="tower" alt="Purple Tower"/>
+                <input type="number" name="purpleTowerCount" id="purpleTowerCount" min="0" max="7" value="0">
+            </div>
+            <div class="column">
+                <label for="orangeTowerCount">Orange Tower Count</label>
+                <img src="media/orangetower.png" height="1000" width="500" class="tower" alt="Orange Tower"/>
+                <input type="number" name="orangeTowerCount" id="orangeTowerCount" min="0" max="7" value="0">
+            </div>
+        </div>
         <br>
-        <label for="orangeTowerCount">Orange Tower Count</label>
-        <input type="number" name="orangeTowerCount" id="orangeTowerCount">
-        <br>
-        <label for="purpleTowerCount">Purple Tower Count</label>
-        <input type="number" name="purpleTowerCount" id="purpleTowerCount">
+        <div class="row">
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoDown('greenTowerCount')">-</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoUp('greenTowerCount')">+</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoDown('purpleTowerCount')">-</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoUp('purpleTowerCount')">+</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoDown('orangeTowerCount')">-</button>
+            </div>
+            <div class="buttonColumn">
+                <button type="button" class="button add" onclick="GoUp('orangeTowerCount')">+</button>
+            </div>
+        </div>
         <br>
         <label for="score">Final Score: </label>
         <input type="number" name="score" id="score">
@@ -67,6 +128,7 @@
         <input type="text" name="comments" id="comments">
         <br>
     </form>
-    <button class=button onclick="calculate()">Complete</button>
+    <div class="submit"><button class="button" onclick="calculate()">Complete</button></div>
+
 </body>
 </html>
