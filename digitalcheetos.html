@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>Vikings Robotics Software</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxanium&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
 </head>
 <body>
 <h1>99000X Tower Takeover Prediction Software</h1>
 <div class="mainStuff">
+    <div class="switcher" onclick="switchSides()"><i class="material-icons" id="switcher">cached</i></div>
     <div class="row">
         <div class="column two">
             <h4 class="scoreUs" id="scoreUs">0</h4>
@@ -36,7 +37,7 @@
         </div>
     </div>
     <br>
-    <div class="row red">
+    <div class="row red" id="usCubes">
         <div class="column">
             <img src="media/greencube.png" height="1000" width="1000" class="cube" alt="Green Cube"/>
             <input class="big" type="number" name="usGreenCount" id="usGreenCount" min="0" max="22" value="0">
@@ -53,26 +54,26 @@
     <br>
     <div class="row">
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('usGreenCount'); updateScore()">-</button>
+            <button type="button" class="button add big greenButton" onclick="GoDown('usGreenCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('usGreenCount'); updateScore()">+</button>
+            <button type="button" class="button add big greenButton" onclick="GoUp('usGreenCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('usPurpleCount'); updateScore()">-</button>
+            <button type="button" class="button add big purpleButton" onclick="GoDown('usPurpleCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('usPurpleCount'); updateScore()">+</button>
+            <button type="button" class="button add big purpleButton" onclick="GoUp('usPurpleCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('usOrangeCount'); updateScore()">-</button>
+            <button type="button" class="button add big orangeButton" onclick="GoDown('usOrangeCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('usOrangeCount'); updateScore()">+</button>
+            <button type="button" class="button add big orangeButton" onclick="GoUp('usOrangeCount'); updateScore()">+</button>
         </div>
     </div>
     <br>
-    <div class="row blue">
+    <div class="row blue" id="themCubes">
         <div class="column">
             <img src="media/greencube.png" height="1000" width="1000" class="cube" alt="Green Cube"/>
             <input class="big" type="number" name="usGreenCount" id="themGreenCount" min="0" max="22" value="0">
@@ -89,58 +90,58 @@
     <br>
     <div class="row">
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('themGreenCount'); updateScore()">-</button>
+            <button type="button" class="button add big greenButton" onclick="GoDown('themGreenCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('themGreenCount'); updateScore()">+</button>
+            <button type="button" class="button add big greenButton" onclick="GoUp('themGreenCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('themPurpleCount'); updateScore()">-</button>
+            <button type="button" class="button add big purpleButton" onclick="GoDown('themPurpleCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('themPurpleCount'); updateScore()">+</button>
+            <button type="button" class="button add big purpleButton" onclick="GoUp('themPurpleCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('themOrangeCount'); updateScore()">-</button>
+            <button type="button" class="button add big orangeButton" onclick="GoDown('themOrangeCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('themOrangeCount'); updateScore()">+</button>
+            <button type="button" class="button add big orangeButton" onclick="GoUp('themOrangeCount'); updateScore()">+</button>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="column">
-            <img src="media/greentower.png" height="1000" width="500" class="tower" alt="Green Tower"/>
+            <img src="media/GreenTowerSquare.png" height="500" width="500" class="tower" alt="Green Tower"/>
             <input class="big" type="number" name="greenTowerCount" id="greenTowers" min="0" max="7" value="0">
         </div>
         <div class="column">
-            <img src="media/purpletower.png" height="1000" width="500" class="tower" alt="Purple Tower"/>
+            <img src="media/PurpleTowerSquare.png" height="500" width="500" class="tower" alt="Purple Tower"/>
             <input class="big" type="number" name="purpleTowerCount" id="purpleTowers" min="0" max="7" value="0">
         </div>
         <div class="column">
-            <img src="media/orangetower.png" height="1000" width="500" class="tower" alt="Orange Tower"/>
+            <img src="media/OrangeTowerSquare.png" height="500" width="500" class="tower" alt="Orange Tower"/>
             <input class="big" type="number" name="orangeTowerCount" id="orangeTowers" min="0" max="7" value="0">
         </div>
     </div>
     <br>
     <div class="row">
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('greenTowers'); updateScore()">-</button>
+            <button type="button" class="button add big greenButton" onclick="GoDown('greenTowers'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('greenTowers'); updateScore()">+</button>
+            <button type="button" class="button add big greenButton" onclick="GoUp('greenTowers'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('purpleTowers'); updateScore()">-</button>
+            <button type="button" class="button add big purpleButton" onclick="GoDown('purpleTowers'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('purpleTowers'); updateScore()">+</button>
+            <button type="button" class="button add big purpleButton" onclick="GoUp('purpleTowers'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('orangeTowers'); updateScore()">-</button>
+            <button type="button" class="button add big orangeButton" onclick="GoDown('orangeTowers'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('orangeTowers'); updateScore()">+</button>
+            <button type="button" class="button add big orangeButton" onclick="GoUp('orangeTowers'); updateScore()">+</button>
         </div>
     </div>
     <br>

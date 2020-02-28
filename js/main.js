@@ -304,3 +304,24 @@ function updateScore() {
 
 
 }
+
+
+let team = "red";
+function switchSides() {
+    if (team === "red") {
+        team = "blue";
+        document.getElementById("scoreUs").style.color = "#0775C8";
+        document.getElementById("scoreThem").style.color = "#D6252F";
+        document.getElementById("switcher").style.color = "#0775C8";
+        document.getElementById("usCubes").style.backgroundColor = "#0775C8";
+        document.getElementById("themCubes").style.backgroundColor = "#D6252F";
+
+    } else if (team === "blue") {
+        team = "red";
+        document.getElementById("scoreUs").style.color = "#D6252F";
+        document.getElementById("scoreThem").style.color = "#0775C8";
+        document.getElementById("switcher").style.color = "#D6252F";
+        document.getElementById("usCubes").style.backgroundColor = "#D6252F";
+        document.getElementById("themCubes").style.backgroundColor = "#0775C8";
+    }
+} 

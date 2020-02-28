@@ -182,3 +182,18 @@ img {
     background-color: #0676C8;
     border-radius: 38px;
 }
+
+.greenButton {
+    background-color: #089134;
+    border-color: #089134;
+}
+
+.purpleButton {
+    background-color: #5F289C;
+    border-color: #5F289C;
+}
+
+.orangeButton {
+    background-color: #FF6510;
+    border-color: #FF6510;
+}
