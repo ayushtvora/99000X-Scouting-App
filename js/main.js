@@ -230,12 +230,13 @@ function strategies() {
 function GoUp(id) {
     let value = parseInt(document.getElementById(id).value);
 
-    if (id === "greenCount" || id === "purpleCount" || id === "orangeCount") {
-        if (value != 22) {
+    if (id === "greenTowerCount" || id === "purpleTowerCount" || id === "orangeTowerCount" ||
+     id === "greenTowers" || id === "purpleTowers" || id === "orangeTowers") {
+        if (value != 7) {
             document.getElementById(id).value = value + 1;
         }
     } else {
-        if (value != 7) {
+        if (value != 22) {
             document.getElementById(id).value = value + 1;
         }
     }
@@ -262,17 +263,35 @@ function clearStrategies() {
 }
 
 function updateScore() {
-    let usGreenCount = document.getElementById("usGreenCount").value,
-        usPurpleCount = document.getElementById("usPurpleCount").value,
-        usOrangeCount = document.getElementById("usOrangeCount").value,
-        themGreenCount = document.getElementById("themGreenCount").value,
-        themPurpleCount = document.getElementById("themPurpleCount").value,
-        themOrangeCount = document.getElementById("themOrangeCount").value,
-        greenTowers = document.getElementById("greenTowers").value,
-        purpleTowers = document.getElementById("purpleTowers").value,
-        orangeTowers = document.getElementById("orangeTowers").value,
+    let usGreenCount = parseInt(document.getElementById("usGreenCount").value),
+        usPurpleCount = parseInt(document.getElementById("usPurpleCount").value),
+        usOrangeCount = parseInt(document.getElementById("usOrangeCount").value),
+        themGreenCount = parseInt(document.getElementById("themGreenCount").value),
+        themPurpleCount = parseInt(document.getElementById("themPurpleCount").value),
+        themOrangeCount = parseInt(document.getElementById("themOrangeCount").value),
+        greenTowers = parseInt(document.getElementById("greenTowers").value),
+        purpleTowers = parseInt(document.getElementById("purpleTowers").value),
+        orangeTowers = parseInt(document.getElementById("orangeTowers").value),
         autonWinner = document.getElementById("autonWinner").value,
         opponent1 = document.getElementById("opponent1").value,
-        opponent2= document.getElementById("opponent2").value;
+        opponent2= document.getElementById("opponent2").value,
+        usScore = 0, themScore = 0, greenMultiplier = 1, purpleMultiplier = 1, orangeMultiplier = 1;
+
+    if (autonWinner === "Us") {
+         usScore += 6;
+    } else if (autonWinner === "Them") {
+        themScore += 6;
+    }
+
+    greenMultiplier += greenTowers;
+    purpleMultiplier += purpleTowers;
+    orangeMultiplier += orangeTowers;
+
+    usScore += (usGreenCount * greenMultiplier) + (usPurpleCount * purpleMultiplier) + (usOrangeCount * orangeMultiplier);
+    themScore += (themGreenCount * greenMultiplier) + (themPurpleCount * purpleMultiplier) + (themOrangeCount * orangeMultiplier);
+    
+    document.getElementById("scoreUs").innerHTML = usScore.toString();
+    document.getElementById("scoreThem").innerHTML = themScore.toString();
+
 
 }

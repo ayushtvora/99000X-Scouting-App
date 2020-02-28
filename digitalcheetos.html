@@ -13,24 +13,25 @@
 <div class="mainStuff">
     <div class="row">
         <div class="column two">
-            <h4 class="scoreUs">0</h4>
+            <h4 class="scoreUs" id="scoreUs">0</h4>
         </div>
         <div class="column two">
-            <h4 class="scoreThem">0</h4>
+            <h4 class="scoreThem" id="scoreThem">0</h4>
         </div>
     </div>
     <div class="row">
         <div class="column">
-            <input class="big" type="text" name="opponent1" id="opponent1" placeholder="Opponent 1">
+            <input class="big width" type="text" name="opponent1" id="opponent1" placeholder="Opponent 1">
         </div>
         <div class="column">
             <select class="big" id="autonWinner">
                 <option disabled selected value>Auton Winner</option>
                 <option value="Us">Us</option>
                 <option value="Them">Them</option>
+                <option value="Tie">Tie</option>
             </select>
         </div>
-        <div class="column">
+        <div class="column width">
             <input class="big" type="text" name="opponent2" id="opponent2" placeholder="Opponent 2">
         </div>
     </div>
@@ -124,22 +125,22 @@
     <br>
     <div class="row">
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('greenTowers')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('greenTowers'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('greenTowers')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('greenTowers'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('purpleTowers')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('purpleTowers'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('purpleTowers')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('purpleTowers'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('orangeTowers')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('orangeTowers'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('orangeTowers')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('orangeTowers'); updateScore()">+</button>
         </div>
     </div>
     <br>

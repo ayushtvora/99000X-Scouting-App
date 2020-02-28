@@ -71,6 +71,10 @@ input[type=number] {
     font-size: 30px;
 }
 
+.big.width {
+    width: auto;
+}
+
 add.big, input[type=number].big{
     font-size: 40px;
     font-weight: bold;
