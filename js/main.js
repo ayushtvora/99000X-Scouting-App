@@ -228,11 +228,15 @@ function strategies() {
 }
 
 function GoUp(id) {
-    let value = parseInt(document.getElementById(id).value);
+    let value = parseInt(document.getElementById(id).value),
+    totalTowers = parseInt(document.getElementById("greenTowers").value) + 
+    parseInt(document.getElementById("purpleTowers").value) + 
+    parseInt(document.getElementById("orangeTowers").value);
+
 
     if (id === "greenTowerCount" || id === "purpleTowerCount" || id === "orangeTowerCount" ||
      id === "greenTowers" || id === "purpleTowers" || id === "orangeTowers") {
-        if (value != 7) {
+        if (totalTowers != 7) {
             document.getElementById(id).value = value + 1;
         }
     } else {
@@ -240,6 +244,11 @@ function GoUp(id) {
             document.getElementById(id).value = value + 1;
         }
     }
+
+
+
+
+
 }
 
 function GoDown(id) {
