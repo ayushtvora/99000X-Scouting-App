@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vikings Robotics Software</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<h1>Tower Takeover</h1>
+<div class="mainStuff">
+    <div class="score">
+        <h4 class="scoreUs">0</h4>
+        <h4 class="scoreThem">0</h4>
+    </div>
+    <div class="autonWinner">
+        <select class="big" id="autonWinner">
+            <option disabled selected value>Auton Winner</option>
+            <option value="Us">Us</option>
+            <option value="Them">Them</option>
+        </select>
+    </div>
+    <br>
+    <div class="row red">
+        <div class="column">
+            <img src="media/greencube.png" height="1000" width="1000" class="cube" alt="Green Cube"/>
+            <input class="big" type="number" name="usGreenCount" id="usGreenCount" min="0" max="22" value="0">
+        </div>
+        <div class="column">
+            <img src="media/purplecube.png" height="1000" width="1000" class="cube" alt="Purple Cube"/><br>
+            <input class="big" type="number" name="usPurpleCount" id="usPurpleCount" min="0" max="22" value="0">
+        </div>
+        <div class="column">
+            <img src="media/orangecube.png" height="1000" width="1000" class="cube" alt="Orange Cube"/>
+            <input class="big" type="number" name="usOrangeCount" id="usOrangeCount" min="0" max="22" value="0">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('usGreenCount')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('usGreenCount')">+</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('usPurpleCount')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('usPurpleCount')">+</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('usOrangeCount')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('usOrangeCount')">+</button>
+        </div>
+    </div>
+    <div class="row blue">
+        <div class="column">
+            <img src="media/greencube.png" height="1000" width="1000" class="cube" alt="Green Cube"/>
+            <input class="big" type="number" name="usGreenCount" id="themGreenCount" min="0" max="22" value="0">
+        </div>
+        <div class="column">
+            <img src="media/purplecube.png" height="1000" width="1000" class="cube" alt="Purple Cube"/><br>
+            <input class="big" type="number" name="usPurpleCount" id="themPurpleCount" min="0" max="22" value="0">
+        </div>
+        <div class="column">
+            <img src="media/orangecube.png" height="1000" width="1000" class="cube" alt="Orange Cube"/>
+            <input class="big" type="number" name="usOrangeCount" id="themOrangeCount" min="0" max="22" value="0">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('themGreenCount')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('themGreenCount')">+</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('themPurpleCount')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('themPurpleCount')">+</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('themOrangeCount')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('themOrangeCount')">+</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="media/greentower.png" height="1000" width="500" class="tower" alt="Green Tower"/>
+            <input class="big" type="number" name="greenTowerCount" id="greenTowers" min="0" max="7" value="0">
+        </div>
+        <div class="column">
+            <img src="media/purpletower.png" height="1000" width="500" class="tower" alt="Purple Tower"/>
+            <input class="big" type="number" name="purpleTowerCount" id="purpleTowers" min="0" max="7" value="0">
+        </div>
+        <div class="column">
+            <img src="media/orangetower.png" height="1000" width="500" class="tower" alt="Orange Tower"/>
+            <input class="big" type="number" name="orangeTowerCount" id="orangeTowers" min="0" max="7" value="0">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('greenTowers')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('greenTowers')">+</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('purpleTowers')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('purpleTowers')">+</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoDown('orangeTowers')">-</button>
+        </div>
+        <div class="buttonColumn">
+            <button type="button" class="button add big" onclick="GoUp('orangeTowers')">+</button>
+        </div>
+    </div>
+    <br>
+</div>
+<br>
+<br>
+</body>
+</html>

@@ -12,7 +12,8 @@ function calculate() {
         prediction4List = JSON.parse(localStorage.getItem("prediction4List")),
         prediction5List = JSON.parse(localStorage.getItem("prediction5List")),
         prediction6List = JSON.parse(localStorage.getItem("prediction6List")),
-        prediction7List = JSON.parse(localStorage.getItem("prediction7List"));
+        prediction7List = JSON.parse(localStorage.getItem("prediction7List")),
+        scouterList = JSON.parse(localStorage.getItem("scouterList"));
 
     let match = document.getElementById("match").value,
         team = document.getElementById("team").value,
@@ -28,17 +29,26 @@ function calculate() {
         orangeTowerCount = document.getElementById("orangeTowerCount").value,
         purpleTowerCount = document.getElementById("purpleTowerCount").value,
         score = document.getElementById("score").value,
-        comments = document.getElementById("comments").value;
+        comments = document.getElementById("comments").value,
+        scouterName = document.getElementById("scouterName").value;
+
+    if (match === "") {
+        alert("Please Insert the Match Number");
+        return;
+    } else if (team === "") {
+        alert("Please Insert the Team Name");
+        return;
+    }
 
     let focus;
     if (parseInt(orangeCount) > parseInt(greenCount) &&  parseInt(orangeCount) > parseInt(purpleCount)) {
-        focus = "Orange"
+        focus = "Orange";
     } else if (parseInt(greenCount) > parseInt(orangeCount) &&  parseInt(greenCount) > parseInt(purpleCount)) {
-        focus = "Green"
+        focus = "Green";
     } else if (parseInt(purpleCount) > parseInt(orangeCount) && parseInt(purpleCount) > parseInt(greenCount)) {
-        focus = "Purple"
+        focus = "Purple";
     } else {
-        focus = "None"
+        focus = "None";
     }
 
     let prediction1, prediction2, prediction3, prediction4, prediction5, prediction6, prediction7;
@@ -60,6 +70,8 @@ function calculate() {
     prediction5List.push(prediction5);
     prediction6List.push(prediction6);
     prediction7List.push(prediction7);
+    scouterList.push("Scouted by: ".concat(scouterName));
+
 
     localStorage.setItem("teamList", JSON.stringify(teamList));
     localStorage.setItem("matchList", JSON.stringify(matchList));
@@ -70,6 +82,7 @@ function calculate() {
     localStorage.setItem("prediction5List", JSON.stringify(prediction5List));
     localStorage.setItem("prediction6List", JSON.stringify(prediction6List));
     localStorage.setItem("prediction7List", JSON.stringify(prediction7List));
+    localStorage.setItem("scouterList", JSON.stringify(scouterList));
 
     alert("Success! Go to the Strategies Page for the Results.")
 }
@@ -183,6 +196,7 @@ function setArrays() {
     localStorage.setItem("prediction5List", "[]");
     localStorage.setItem("prediction6List", "[]");
     localStorage.setItem("prediction7List", "[]");
+    localStorage.setItem("scouterList", "[]");
 }
 
 function strategies() {
@@ -195,6 +209,7 @@ function strategies() {
         prediction5List = JSON.parse(localStorage.getItem("prediction5List")),
         prediction6List = JSON.parse(localStorage.getItem("prediction6List")),
         prediction7List = JSON.parse(localStorage.getItem("prediction7List")),
+        scouterList = JSON.parse(localStorage.getItem("scouterList")),
         strategyView = "";
 
     for (let i = 0; i < teamList.length; i++) {
@@ -205,7 +220,8 @@ function strategies() {
             "</li><li>"+ prediction4List[i] +
             "</li><li>"+ prediction5List[i] +
             "</li><li>"+ prediction6List[i] +
-            "</li><li>"+ prediction7List[i] + "</li></ul>";
+            "</li><li>"+ prediction7List[i] +
+            "</li><li>"+ scouterList[i] + "</li></ul>";
     }
 
     document.getElementById("strategyView").innerHTML = strategyView;
@@ -243,4 +259,18 @@ function clearStrategies() {
     localStorage.setItem("prediction6List", "[]");
     localStorage.setItem("prediction7List", "[]");
     document.getElementById("strategyView").innerHTML = "<p>Start scouting teams to see strategies for your different teams!</p>";
+}
+
+function updateScore() {
+    let usGreenCount = document.getElementById("usGreenCount").value,
+        usPurpleCount = document.getElementById("usPurpleCount").value,
+        usOrangeCount = document.getElementById("usOrangeCount").value,
+        themGreenCount = document.getElementById("themGreenCount").value,
+        themPurpleCount = document.getElementById("themPurpleCount").value,
+        themOrangeCount = document.getElementById("themOrangeCount").value,
+        greenTowers = document.getElementById("greenTowers").value,
+        purpleTowers = document.getElementById("purpleTowers").value,
+        orangeTowers = document.getElementById("orangeTowers").value,
+        autonWinner = document.getElementById("autonWinner").value;
+
 }

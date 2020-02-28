@@ -8,13 +8,13 @@ body {
 }
 
 h1, h2 {
-    color: #F20505;
+    color: #D9282F;
     text-align: center;
     font-family: "Oxanium", Arial, sans-serif;
 }
 
 h3 {
-    color: #F20505;
+    color: #D9282F;
     font-family: "Oxanium", Arial, sans-serif;
 }
 
@@ -48,12 +48,41 @@ input[type=number] {
     width: 50px;
 }
 
+.mainStuff {
+    text-align: center;
+}
+
+.scoreUs {
+    font-size: 50px;
+    font-family: "Oxanium", Arial, sans-serif;
+    color: #D6252F;
+}
+
+.scoreThem {
+    font-size: 50px;
+    font-family: "Oxanium", Arial, sans-serif;
+    color: #0775C8;
+}
+
+.big {
+    font-size: 30px;
+    text-align: center;
+}
+
+.us {
+    text-align: center;
+}
+
+.them {
+    text-align: center;
+}
+
 .button, #clearStrategies {
-    background-color: #D90416;
+    background-color: #D9282F;
     font-size: 24px;
     padding: 14px 40px;
     color: whitesmoke;
-    border: 2px solid #D90416;
+    border: 2px solid #D9282F;
     margin: 2% 2%;
     font-family: "Oxanium", Arial, sans-serif;
     text-align: center;
@@ -63,6 +92,13 @@ input[type=number] {
     padding: 0 0;
     height: 50px;
     width: 50px;
+}
+
+.button.add.big {
+    padding: 0 0;
+    height: 100px;
+    width: 100px;
+    font-size: 48px;
 }
 
 .submit {
@@ -80,7 +116,7 @@ text-align: center;
 }
 
 .material-icons {
-    color: #F20505;
+    color: #D9282F;
     font-size: 48px;
     padding-left: 25px;
     padding-right: 25px;
@@ -95,7 +131,7 @@ text-align: center;
 }
 
 .cube, .tower {
-    width: 100px;
+    width: 200px;
     height: auto;
 }
 
@@ -121,4 +157,12 @@ text-align: center;
 img {
     height: 150px;
     width: auto;
+}
+
+.row.red {
+    background-color: #D6252F;
+}
+
+.row.blue {
+    background-color: #0676C8;
 }
