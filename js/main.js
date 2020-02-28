@@ -271,6 +271,8 @@ function updateScore() {
         greenTowers = document.getElementById("greenTowers").value,
         purpleTowers = document.getElementById("purpleTowers").value,
         orangeTowers = document.getElementById("orangeTowers").value,
-        autonWinner = document.getElementById("autonWinner").value;
+        autonWinner = document.getElementById("autonWinner").value,
+        opponent1 = document.getElementById("opponent1").value,
+        opponent2= document.getElementById("opponent2").value;
 
 }

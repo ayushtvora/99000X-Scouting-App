@@ -42,6 +42,7 @@ p {
 input[type=number], input[type=text], select {
     margin-top: 1%;
     font-family: "Open Sans", Arial, sans-serif;
+    border-radius: 18px;
 }
 
 input[type=number] {
@@ -56,16 +57,23 @@ input[type=number] {
     font-size: 50px;
     font-family: "Oxanium", Arial, sans-serif;
     color: #D6252F;
+    display: inline;
 }
 
 .scoreThem {
     font-size: 50px;
     font-family: "Oxanium", Arial, sans-serif;
     color: #0775C8;
+    display: inline;
 }
 
 .big {
     font-size: 30px;
+}
+
+add.big, input[type=number].big{
+    font-size: 40px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -86,6 +94,7 @@ input[type=number] {
     margin: 2% 2%;
     font-family: "Oxanium", Arial, sans-serif;
     text-align: center;
+    border-radius: 38px;
 }
 
 .button.add {
@@ -98,7 +107,8 @@ input[type=number] {
     padding: 0 0;
     height: 100px;
     width: 100px;
-    font-size: 48px;
+    font-size: 69px;
+    font-size: 69px;
 }
 
 .submit {
@@ -161,8 +171,10 @@ img {
 
 .row.red {
     background-color: #D6252F;
+    border-radius: 38px;
 }
 
 .row.blue {
     background-color: #0676C8;
+    border-radius: 38px;
 }

@@ -9,18 +9,30 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-<h1>Tower Takeover</h1>
+<h1>99000X Tower Takeover Prediction Software</h1>
 <div class="mainStuff">
-    <div class="score">
-        <h4 class="scoreUs">0</h4>
-        <h4 class="scoreThem">0</h4>
+    <div class="row">
+        <div class="column two">
+            <h4 class="scoreUs">0</h4>
+        </div>
+        <div class="column two">
+            <h4 class="scoreThem">0</h4>
+        </div>
     </div>
-    <div class="autonWinner">
-        <select class="big" id="autonWinner">
-            <option disabled selected value>Auton Winner</option>
-            <option value="Us">Us</option>
-            <option value="Them">Them</option>
-        </select>
+    <div class="row">
+        <div class="column">
+            <input class="big" type="text" name="opponent1" id="opponent1" placeholder="Opponent 1">
+        </div>
+        <div class="column">
+            <select class="big" id="autonWinner">
+                <option disabled selected value>Auton Winner</option>
+                <option value="Us">Us</option>
+                <option value="Them">Them</option>
+            </select>
+        </div>
+        <div class="column">
+            <input class="big" type="text" name="opponent2" id="opponent2" placeholder="Opponent 2">
+        </div>
     </div>
     <br>
     <div class="row red">
@@ -40,24 +52,25 @@
     <br>
     <div class="row">
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('usGreenCount')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('usGreenCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('usGreenCount')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('usGreenCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('usPurpleCount')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('usPurpleCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('usPurpleCount')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('usPurpleCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('usOrangeCount')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('usOrangeCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('usOrangeCount')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('usOrangeCount'); updateScore()">+</button>
         </div>
     </div>
+    <br>
     <div class="row blue">
         <div class="column">
             <img src="media/greencube.png" height="1000" width="1000" class="cube" alt="Green Cube"/>
@@ -75,24 +88,25 @@
     <br>
     <div class="row">
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('themGreenCount')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('themGreenCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('themGreenCount')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('themGreenCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('themPurpleCount')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('themPurpleCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('themPurpleCount')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('themPurpleCount'); updateScore()">+</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoDown('themOrangeCount')">-</button>
+            <button type="button" class="button add big" onclick="GoDown('themOrangeCount'); updateScore()">-</button>
         </div>
         <div class="buttonColumn">
-            <button type="button" class="button add big" onclick="GoUp('themOrangeCount')">+</button>
+            <button type="button" class="button add big" onclick="GoUp('themOrangeCount'); updateScore()">+</button>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="column">
             <img src="media/greentower.png" height="1000" width="500" class="tower" alt="Green Tower"/>
