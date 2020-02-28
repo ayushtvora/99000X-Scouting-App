@@ -203,3 +203,7 @@ img {
     top: 20px;
     right: 20px;
 }
+
+#switcher {
+    font-size: 100px;
+}
