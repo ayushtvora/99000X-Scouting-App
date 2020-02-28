@@ -271,39 +271,39 @@ function clearStrategies() {
     document.getElementById("strategyView").innerHTML = "<p>Start scouting teams to see strategies for your different teams!</p>";
 }
 
-function updateScore() {
-    let usGreenCount = parseInt(document.getElementById("usGreenCount").value),
-        usPurpleCount = parseInt(document.getElementById("usPurpleCount").value),
-        usOrangeCount = parseInt(document.getElementById("usOrangeCount").value),
-        themGreenCount = parseInt(document.getElementById("themGreenCount").value),
-        themPurpleCount = parseInt(document.getElementById("themPurpleCount").value),
-        themOrangeCount = parseInt(document.getElementById("themOrangeCount").value),
-        greenTowers = parseInt(document.getElementById("greenTowers").value),
-        purpleTowers = parseInt(document.getElementById("purpleTowers").value),
-        orangeTowers = parseInt(document.getElementById("orangeTowers").value),
-        autonWinner = document.getElementById("autonWinner").value,
-        opponent1 = document.getElementById("opponent1").value,
-        opponent2= document.getElementById("opponent2").value,
-        usScore = 0, themScore = 0, greenMultiplier = 1, purpleMultiplier = 1, orangeMultiplier = 1;
+// function updateScore() {
+//     let green_us = parseInt(document.getElementById("usGreenCount").value),
+//         purple_us = parseInt(document.getElementById("usPurpleCount").value),
+//         orange_us = parseInt(document.getElementById("usOrangeCount").value),
+//         green_them = parseInt(document.getElementById("themGreenCount").value),
+//         purple_them = parseInt(document.getElementById("themPurpleCount").value),
+//         orange_count = parseInt(document.getElementById("themOrangeCount").value),
+//         green_tower = parseInt(document.getElementById("greenTowers").value),
+//         purple_tower = parseInt(document.getElementById("purpleTowers").value),
+//         orange_tower = parseInt(document.getElementById("orangeTowers").value),
+//         autonomous_winner = document.getElementById("autonWinner").value,
+//         opponent_1 = document.getElementById("opponent1").value,
+//         opponent_2= document.getElementById("opponent2").value,
+//         usScore = 0, themScore = 0, greenMultiplier = 1, purpleMultiplier = 1, orangeMultiplier = 1;
 
-    if (autonWinner === "Us") {
-         usScore += 6;
-    } else if (autonWinner === "Them") {
-        themScore += 6;
-    }
+//     if (autonWinner === "us") {
+//          usScore += auton_bonus;
+//     } else if (autonWinner === "them") {
+//         themScore += auton_bonus;
+//     }
 
-    greenMultiplier += greenTowers;
-    purpleMultiplier += purpleTowers;
-    orangeMultiplier += orangeTowers;
+//     greenMultiplier += greenTowers;
+//     purpleMultiplier += purpleTowers;
+//     orangeMultiplier += orangeTowers;
 
-    usScore += (usGreenCount * greenMultiplier) + (usPurpleCount * purpleMultiplier) + (usOrangeCount * orangeMultiplier);
-    themScore += (themGreenCount * greenMultiplier) + (themPurpleCount * purpleMultiplier) + (themOrangeCount * orangeMultiplier);
+//     usScore += (usGreenCount * greenMultiplier) + (usPurpleCount * purpleMultiplier) + (usOrangeCount * orangeMultiplier);
+//     themScore += (themGreenCount * greenMultiplier) + (themPurpleCount * purpleMultiplier) + (themOrangeCount * orangeMultiplier);
     
-    document.getElementById("scoreUs").innerHTML = usScore.toString();
-    document.getElementById("scoreThem").innerHTML = themScore.toString();
+//     document.getElementById("scoreUs").innerHTML = usScore.toString();
+//     document.getElementById("scoreThem").innerHTML = themScore.toString();
 
 
-}
+// }
 
 
 let team = "red";

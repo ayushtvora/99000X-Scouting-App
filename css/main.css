@@ -197,3 +197,9 @@ img {
     background-color: #FF6510;
     border-color: #FF6510;
 }
+
+#home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
