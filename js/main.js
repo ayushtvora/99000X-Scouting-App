@@ -97,10 +97,14 @@ function calculate() {
 function Prediction1(m, tStack, tTower, type) {
     let s, b, p;
     s = Math.min(3, Math.round((60+tTower)/(2*tStack)));
+    alert(s);
     b = Math.min(7, Math.floor((60-(s * tStack))/(tTower)));
+    alert(b);
     p = (s * m) * (b + 1);
+    alert(p);
 
-    return "Predicted Score: ".concat(p.toString(), " Points with ", s.toString(), " stack(s) of ", m.toString(), " cubes and ", b.toString(), " tower(s). Robot Type: ", type);
+    let prediction =  "Predicted Score: ".concat(p.toString(), " Points with ", s.toString(), " stack(s) of ", m.toString(), " cubes and ", b.toString(), " tower(s). Robot Type: ", type);
+    return prediction;
 }
 
 /**
@@ -231,17 +235,17 @@ function strategies() {
     document.getElementById("strategyView").innerHTML = strategyView;
 }
 
-function GoUp(id) {
+function GoUp(id, greenTowerCount, purpleTowerCount, orangeTowerCount) {
     let val = parseInt(document.getElementById(id).value),
-    totalTowers = parseInt(document.getElementById("greenTowerCount").value) + 
-    parseInt(document.getElementById("purpleTowerCount").value) + 
-    parseInt(document.getElementById("orangeTowerCount").value);
+    totalTowers;
 
-    if (id === "greenTowerCount" || id === "purpleTowerCount" || id === "orangeTowerCount" ||
-     id === "greenTowers" || id === "purpleTowers" || id === "orangeTowers") {
-        if (totalTowers != 7) {
-            document.getElementById(id).value = val + 1;
-        }
+    if (id === "greenTowerCount" || id === "purpleTowerCount" || id === "orangeTowerCount") {
+        totalTowers = parseInt(document.getElementById("greenTowerCount").value) + parseInt(document.getElementById("purpleTowerCount").value) + parseInt(document.getElementById("orangeTowerCount").value);
+    } else if (id === "greenTowers" || id === "purpleTowers" || id === "orangeTowers") {
+        totalTowers = parseInt(document.getElementById("greenTowers").value) + parseInt(document.getElementById("purpleTowers").value) + parseInt(document.getElementById("orangeTowers").value);
+    }
+    if (totalTowers != 7) {
+        document.getElementById(id).value = val + 1;
     } else {
         if (val != 22) {
             document.getElementById(id).value = val + 1;
