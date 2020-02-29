@@ -1,38 +1,38 @@
-let autonomous_winner = "";
-let status = "";
-let opponent_1 = "";
-let opponent_2 = "";
-let score_us = 0;
-let score_them = 0;
-let orange_us = 0;
-let purple_us = 0;
-let green_us = 0;
-let orange_them = 0;
-let purple_them = 0;
-let green_them = 0;
-let orange_tower = 0;
-let purple_tower = 0;
-let green_tower = 0;
-let update_descore_orange_us = 0;
-let update_descore_purple_us = 0;
-let update_descore_green_us = 0;
-let update_score_orange_us = 0;
-let update_score_purple_us = 0;
-let update_score_green_us = 0;
-let update_descore_orange_them = 0;
-let update_descore_purple_them = 0;
-let update_descore_green_them = 0;
-let update_score_orange_them = 0;
-let update_score_purple_them = 0;
-let update_score_green_them = 0;
-let descore_orange_difference = 0;
-let descore_purple_differenc = 0;
-let descore_green_difference = 0;
-let score_orange_difference = 0;
-let score_purple_difference = 0;
-let score_green_difference = 0;
-let auton_bonus = 6;
-let impossible = -1000;
+// let autonomous_winner = "";
+// let status = "";
+// let opponent_1 = "";
+// let opponent_2 = "";
+// let score_us = 0;
+// let score_them = 0;
+// let orange_us = 0;
+// let purple_us = 0;
+// let green_us = 0;
+// let orange_them = 0;
+// let purple_them = 0;
+// let green_them = 0;
+// let orange_tower = 0;
+// let purple_tower = 0;
+// let green_tower = 0;
+// let update_descore_orange_us = 0;
+// let update_descore_purple_us = 0;
+// let update_descore_green_us = 0;
+// let update_score_orange_us = 0;
+// let update_score_purple_us = 0;
+// let update_score_green_us = 0;
+// let update_descore_orange_them = 0;
+// let update_descore_purple_them = 0;
+// let update_descore_green_them = 0;
+// let update_score_orange_them = 0;
+// let update_score_purple_them = 0;
+// let update_score_green_them = 0;
+// let descore_orange_difference = 0;
+// let descore_purple_differenc = 0;
+// let descore_green_difference = 0;
+// let score_orange_difference = 0;
+// let score_purple_difference = 0;
+// let score_green_difference = 0;
+// let auton_bonus = 6;
+// let impossible = -1000;
 
 function calculate() {
 
@@ -355,3 +355,14 @@ function switchSides() {
         document.getElementById("themCubes").style.backgroundColor = "#0775C8";
     }
 } 
+
+let robot = "white";
+function greyToWhite() {
+    if (robot === "white") {
+        robot = "grey";
+        document.getElementById("robot").style.color = "grey";
+    } else if (robot === "grey") {
+        robot = "white";
+        document.getElementById("robot").style.color = "white";
+    }
+}

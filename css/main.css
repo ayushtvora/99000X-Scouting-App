@@ -207,3 +207,15 @@ img {
 #switcher {
     font-size: 100px;
 }
+
+#robot {
+    color: aliceblue;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#strategies {
+    color: whitesmoke;
+    font-family: "Open Sans", Arial, sans-serif;
+}
