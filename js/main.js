@@ -1,39 +1,3 @@
-// let autonomous_winner = "";
-// let status = "";
-// let opponent_1 = "";
-// let opponent_2 = "";
-// let score_us = 0;
-// let score_them = 0;
-// let orange_us = 0;
-// let purple_us = 0;
-// let green_us = 0;
-// let orange_them = 0;
-// let purple_them = 0;
-// let green_them = 0;
-// let orange_tower = 0;
-// let purple_tower = 0;
-// let green_tower = 0;
-// let update_descore_orange_us = 0;
-// let update_descore_purple_us = 0;
-// let update_descore_green_us = 0;
-// let update_score_orange_us = 0;
-// let update_score_purple_us = 0;
-// let update_score_green_us = 0;
-// let update_descore_orange_them = 0;
-// let update_descore_purple_them = 0;
-// let update_descore_green_them = 0;
-// let update_score_orange_them = 0;
-// let update_score_purple_them = 0;
-// let update_score_green_them = 0;
-// let descore_orange_difference = 0;
-// let descore_purple_differenc = 0;
-// let descore_green_difference = 0;
-// let score_orange_difference = 0;
-// let score_purple_difference = 0;
-// let score_green_difference = 0;
-// let auton_bonus = 6;
-// let impossible = -1000;
-
 function calculate() {
 
     if (localStorage.getItem("matchList") === null) {
@@ -66,7 +30,11 @@ function calculate() {
         purpleTowerCount = document.getElementById("purpleTowerCount").value,
         score = document.getElementById("score").value,
         comments = document.getElementById("comments").value,
-        scouterName = document.getElementById("scouterName").value;
+        scouterName = document.getElementById("scouterName").value,
+        autonComments = document.getElementById("autonComments").value,
+        type = document.getElementById("type").value,
+        driverSkill = document.getElementById("driverSkill").value;
+
 
     if (match === "") {
         alert("Please Insert the Match Number");
@@ -88,11 +56,11 @@ function calculate() {
     }
 
     let prediction1, prediction2, prediction3, prediction4, prediction5, prediction6, prediction7;
-    prediction1 = Prediction1(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime));
+    prediction1 = Prediction1(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), type);
     prediction2 = Prediction2(side, focus);
     prediction3 = Prediction3(parseInt(orangeCount), parseInt(greenCount), parseInt(purpleCount), focus);
-    prediction4 = Prediction4(parseInt(auton));
-    prediction5 = Prediction5(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), parseInt(score));
+    prediction4 = Prediction4(parseInt(auton), autonComments);
+    prediction5 = Prediction5(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), parseInt(score), driverSkill);
     prediction6 = Prediction6(parseInt(orangeTowerCount), parseInt(greenTowerCount), parseInt(purpleTowerCount));
     prediction7 = Prediction7(comments);
 
@@ -126,13 +94,13 @@ function calculate() {
 /**
  * @return {string}
  */
-function Prediction1(m, tStack, tTower) {
+function Prediction1(m, tStack, tTower, type) {
     let s, b, p;
     s = Math.min(3, Math.round((60+tTower)/(2*tStack)));
     b = Math.min(7, Math.floor((60-(s * tStack))/(tTower)));
     p = (s * m) * (b + 1);
 
-    return "Predicted Score: ".concat(p.toString(), " Points with ", s.toString(), " stack(s) of ", m.toString(), " cubes and ", b.toString(), " tower(s).");
+    return "Predicted Score: ".concat(p.toString(), " Points with ", s.toString(), " stack(s) of ", m.toString(), " cubes and ", b.toString(), " tower(s). Robot Type: ", type);
 }
 
 /**
@@ -175,18 +143,18 @@ function Prediction3(o, g, p, focus) {
 /**
  * @return {string}
  */
-function Prediction4(autonPoints) {
+function Prediction4(autonPoints, autonComments) {
     if (autonPoints === 0) {
         return "They do not have a functioning Auton.";
     } else {
-        return "They have a ".concat(autonPoints.toString(), " point Auton.");
+        return "They have a ".concat(autonPoints.toString(), " point Auton. Some additional comments: ", autonComments);
     }
 }
 
 /**
  * @return {string}
  */
-function Prediction5(m, tStack, tTower, score) {
+function Prediction5(m, tStack, tTower, score, driverSkill) {
     let s, b, p, diff;
     s = Math.min(3, Math.round((60+tTower)/(2*tStack)));
     b = Math.min(7, Math.floor((60-(s * tStack))/(tTower)));
@@ -194,12 +162,12 @@ function Prediction5(m, tStack, tTower, score) {
 
     if (score > p) {
         diff = score - p;
-        return "In the last match, the team surpassed their expected score by ".concat(diff.toString(), " points.");
+        return "In the last match, the team surpassed their expected score by ".concat(diff.toString(), " points. The driver was rated ", driverSkill, "/10.");
     } else if (score < p) {
         diff = p - score;
-        return "In the last match, the team failed their expected score by ".concat(diff.toString(), " points.");
+        return "In the last match, the team failed their expected score by ".concat(diff.toString(), " points. The driver was rated ", driverSkill, "/10.");
     } else {
-        return "In the last match, the team met their expected goal of ".concat(score.toString(), ".");
+        return "In the last match, the team met their expected goal of ".concat(score.toString(), ". The driver was rated ", driverSkill, "/10.");
     }
 }
 
@@ -264,19 +232,19 @@ function strategies() {
 }
 
 function GoUp(id) {
-    let value = parseInt(document.getElementById(id).value),
-    totalTowers = parseInt(document.getElementById("greenTowers").value) + 
-    parseInt(document.getElementById("purpleTowers").value) + 
-    parseInt(document.getElementById("orangeTowers").value);
+    let val = parseInt(document.getElementById(id).value),
+    totalTowers = parseInt(document.getElementById("greenTowerCount").value) + 
+    parseInt(document.getElementById("purpleTowerCount").value) + 
+    parseInt(document.getElementById("orangeTowerCount").value);
 
     if (id === "greenTowerCount" || id === "purpleTowerCount" || id === "orangeTowerCount" ||
      id === "greenTowers" || id === "purpleTowers" || id === "orangeTowers") {
         if (totalTowers != 7) {
-            document.getElementById(id).value = value + 1;
+            document.getElementById(id).value = val + 1;
         }
     } else {
-        if (value != 22) {
-            document.getElementById(id).value = value + 1;
+        if (val != 22) {
+            document.getElementById(id).value = val + 1;
         }
     }
 }
@@ -299,6 +267,37 @@ function clearStrategies() {
     localStorage.setItem("prediction6List", "[]");
     localStorage.setItem("prediction7List", "[]");
     document.getElementById("strategyView").innerHTML = "<p>Start scouting teams to see strategies for your different teams!</p>";
+}
+
+let team = "red";
+function switchSides() {
+    if (team === "red") {
+        team = "blue";
+        document.getElementById("scoreUs").style.color = "#0775C8";
+        document.getElementById("scoreThem").style.color = "#D6252F";
+        document.getElementById("switcher").style.color = "#0775C8";
+        document.getElementById("usCubes").style.backgroundColor = "#0775C8";
+        document.getElementById("themCubes").style.backgroundColor = "#D6252F";
+
+    } else if (team === "blue") {
+        team = "red";
+        document.getElementById("scoreUs").style.color = "#D6252F";
+        document.getElementById("scoreThem").style.color = "#0775C8";
+        document.getElementById("switcher").style.color = "#D6252F";
+        document.getElementById("usCubes").style.backgroundColor = "#D6252F";
+        document.getElementById("themCubes").style.backgroundColor = "#0775C8";
+    }
+} 
+
+let robot = "white";
+function greyToWhite() {
+    if (robot === "white") {
+        robot = "grey";
+        document.getElementById("robot").style.color = "grey";
+    } else if (robot === "grey") {
+        robot = "white";
+        document.getElementById("robot").style.color = "white";
+    }
 }
 
 // function updateScore() {
@@ -334,35 +333,3 @@ function clearStrategies() {
 
 
 // }
-
-
-let team = "red";
-function switchSides() {
-    if (team === "red") {
-        team = "blue";
-        document.getElementById("scoreUs").style.color = "#0775C8";
-        document.getElementById("scoreThem").style.color = "#D6252F";
-        document.getElementById("switcher").style.color = "#0775C8";
-        document.getElementById("usCubes").style.backgroundColor = "#0775C8";
-        document.getElementById("themCubes").style.backgroundColor = "#D6252F";
-
-    } else if (team === "blue") {
-        team = "red";
-        document.getElementById("scoreUs").style.color = "#D6252F";
-        document.getElementById("scoreThem").style.color = "#0775C8";
-        document.getElementById("switcher").style.color = "#D6252F";
-        document.getElementById("usCubes").style.backgroundColor = "#D6252F";
-        document.getElementById("themCubes").style.backgroundColor = "#0775C8";
-    }
-} 
-
-let robot = "white";
-function greyToWhite() {
-    if (robot === "white") {
-        robot = "grey";
-        document.getElementById("robot").style.color = "grey";
-    } else if (robot === "grey") {
-        robot = "white";
-        document.getElementById("robot").style.color = "white";
-    }
-}
