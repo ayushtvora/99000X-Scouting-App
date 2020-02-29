@@ -382,7 +382,7 @@ function opponent_score (score_orange_difference, score_purple_difference, score
 }
 
 function output_list() {
-  let message;
+  let message = "<br>";
 
   for (let i = 0; i < strategiesArray.length; i++) {
     message += "<li>" + strategiesArray[i] + "</li>";
@@ -390,8 +390,6 @@ function output_list() {
 
   document.getElementById("strategies").innerHTML = message;
   strategiesArray = [];
-
-  return;
 }
 
 function opponents() {
