@@ -30,7 +30,11 @@ function calculate() {
         purpleTowerCount = document.getElementById("purpleTowerCount").value,
         score = document.getElementById("score").value,
         comments = document.getElementById("comments").value,
-        scouterName = document.getElementById("scouterName").value;
+        scouterName = document.getElementById("scouterName").value,
+        autonComments = document.getElementById("autonComments").value,
+        type = document.getElementById("type").value,
+        driverSkill = document.getElementById("driverSkill").value;
+
 
     if (match === "") {
         alert("Please Insert the Match Number");
@@ -52,11 +56,11 @@ function calculate() {
     }
 
     let prediction1, prediction2, prediction3, prediction4, prediction5, prediction6, prediction7;
-    prediction1 = Prediction1(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime));
+    prediction1 = Prediction1(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), type);
     prediction2 = Prediction2(side, focus);
     prediction3 = Prediction3(parseInt(orangeCount), parseInt(greenCount), parseInt(purpleCount), focus);
-    prediction4 = Prediction4(parseInt(auton));
-    prediction5 = Prediction5(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), parseInt(score));
+    prediction4 = Prediction4(parseInt(auton), autonComments);
+    prediction5 = Prediction5(parseInt(maxStack), parseInt(stackTime), parseInt(towerTime), parseInt(score), driverSkill);
     prediction6 = Prediction6(parseInt(orangeTowerCount), parseInt(greenTowerCount), parseInt(purpleTowerCount));
     prediction7 = Prediction7(comments);
 
@@ -90,13 +94,17 @@ function calculate() {
 /**
  * @return {string}
  */
-function Prediction1(m, tStack, tTower) {
+function Prediction1(m, tStack, tTower, type) {
     let s, b, p;
     s = Math.min(3, Math.round((60+tTower)/(2*tStack)));
+    alert(s);
     b = Math.min(7, Math.floor((60-(s * tStack))/(tTower)));
+    alert(b);
     p = (s * m) * (b + 1);
+    alert(p);
 
-    return "Predicted Score: ".concat(p.toString(), " Points with ", s.toString(), " stack(s) of ", m.toString(), " cubes and ", b.toString(), " tower(s).");
+    let prediction =  "Predicted Score: ".concat(p.toString(), " Points with ", s.toString(), " stack(s) of ", m.toString(), " cubes and ", b.toString(), " tower(s). Robot Type: ", type);
+    return prediction;
 }
 
 /**
@@ -139,18 +147,18 @@ function Prediction3(o, g, p, focus) {
 /**
  * @return {string}
  */
-function Prediction4(autonPoints) {
+function Prediction4(autonPoints, autonComments) {
     if (autonPoints === 0) {
         return "They do not have a functioning Auton.";
     } else {
-        return "They have a ".concat(autonPoints.toString(), " point Auton.");
+        return "They have a ".concat(autonPoints.toString(), " point Auton. Some additional comments: ", autonComments);
     }
 }
 
 /**
  * @return {string}
  */
-function Prediction5(m, tStack, tTower, score) {
+function Prediction5(m, tStack, tTower, score, driverSkill) {
     let s, b, p, diff;
     s = Math.min(3, Math.round((60+tTower)/(2*tStack)));
     b = Math.min(7, Math.floor((60-(s * tStack))/(tTower)));
@@ -158,12 +166,12 @@ function Prediction5(m, tStack, tTower, score) {
 
     if (score > p) {
         diff = score - p;
-        return "In the last match, the team surpassed their expected score by ".concat(diff.toString(), " points.");
+        return "In the last match, the team surpassed their expected score by ".concat(diff.toString(), " points. The driver was rated ", driverSkill, "/10.");
     } else if (score < p) {
         diff = p - score;
-        return "In the last match, the team failed their expected score by ".concat(diff.toString(), " points.");
+        return "In the last match, the team failed their expected score by ".concat(diff.toString(), " points. The driver was rated ", driverSkill, "/10.");
     } else {
-        return "In the last match, the team met their expected goal of ".concat(score.toString(), ".");
+        return "In the last match, the team met their expected goal of ".concat(score.toString(), ". The driver was rated ", driverSkill, "/10.");
     }
 }
 
@@ -227,16 +235,20 @@ function strategies() {
     document.getElementById("strategyView").innerHTML = strategyView;
 }
 
-function GoUp(id) {
-    let value = parseInt(document.getElementById(id).value);
+function GoUp(id, greenTowerCount, purpleTowerCount, orangeTowerCount) {
+    let val = parseInt(document.getElementById(id).value),
+    totalTowers;
 
-    if (id === "greenCount" || id === "purpleCount" || id === "orangeCount") {
-        if (value != 22) {
-            document.getElementById(id).value = value + 1;
-        }
+    if (id === "greenTowerCount" || id === "purpleTowerCount" || id === "orangeTowerCount") {
+        totalTowers = parseInt(document.getElementById("greenTowerCount").value) + parseInt(document.getElementById("purpleTowerCount").value) + parseInt(document.getElementById("orangeTowerCount").value);
+    } else if (id === "greenTowers" || id === "purpleTowers" || id === "orangeTowers") {
+        totalTowers = parseInt(document.getElementById("greenTowers").value) + parseInt(document.getElementById("purpleTowers").value) + parseInt(document.getElementById("orangeTowers").value);
+    }
+    if (totalTowers != 7) {
+        document.getElementById(id).value = val + 1;
     } else {
-        if (value != 7) {
-            document.getElementById(id).value = value + 1;
+        if (val != 22) {
+            document.getElementById(id).value = val + 1;
         }
     }
 }
@@ -261,18 +273,67 @@ function clearStrategies() {
     document.getElementById("strategyView").innerHTML = "<p>Start scouting teams to see strategies for your different teams!</p>";
 }
 
-function updateScore() {
-    let usGreenCount = document.getElementById("usGreenCount").value,
-        usPurpleCount = document.getElementById("usPurpleCount").value,
-        usOrangeCount = document.getElementById("usOrangeCount").value,
-        themGreenCount = document.getElementById("themGreenCount").value,
-        themPurpleCount = document.getElementById("themPurpleCount").value,
-        themOrangeCount = document.getElementById("themOrangeCount").value,
-        greenTowers = document.getElementById("greenTowers").value,
-        purpleTowers = document.getElementById("purpleTowers").value,
-        orangeTowers = document.getElementById("orangeTowers").value,
-        autonWinner = document.getElementById("autonWinner").value,
-        opponent1 = document.getElementById("opponent1").value,
-        opponent2= document.getElementById("opponent2").value;
+let team = "red";
+function switchSides() {
+    if (team === "red") {
+        team = "blue";
+        document.getElementById("scoreUs").style.color = "#0775C8";
+        document.getElementById("scoreThem").style.color = "#D6252F";
+        document.getElementById("switcher").style.color = "#0775C8";
+        document.getElementById("usCubes").style.backgroundColor = "#0775C8";
+        document.getElementById("themCubes").style.backgroundColor = "#D6252F";
 
+    } else if (team === "blue") {
+        team = "red";
+        document.getElementById("scoreUs").style.color = "#D6252F";
+        document.getElementById("scoreThem").style.color = "#0775C8";
+        document.getElementById("switcher").style.color = "#D6252F";
+        document.getElementById("usCubes").style.backgroundColor = "#D6252F";
+        document.getElementById("themCubes").style.backgroundColor = "#0775C8";
+    }
+} 
+
+let robot = "white";
+function greyToWhite() {
+    if (robot === "white") {
+        robot = "grey";
+        document.getElementById("robot").style.color = "grey";
+    } else if (robot === "grey") {
+        robot = "white";
+        document.getElementById("robot").style.color = "white";
+    }
 }
+
+// function updateScore() {
+//     let green_us = parseInt(document.getElementById("usGreenCount").value),
+//         purple_us = parseInt(document.getElementById("usPurpleCount").value),
+//         orange_us = parseInt(document.getElementById("usOrangeCount").value),
+//         green_them = parseInt(document.getElementById("themGreenCount").value),
+//         purple_them = parseInt(document.getElementById("themPurpleCount").value),
+//         orange_count = parseInt(document.getElementById("themOrangeCount").value),
+//         green_tower = parseInt(document.getElementById("greenTowers").value),
+//         purple_tower = parseInt(document.getElementById("purpleTowers").value),
+//         orange_tower = parseInt(document.getElementById("orangeTowers").value),
+//         autonomous_winner = document.getElementById("autonWinner").value,
+//         opponent_1 = document.getElementById("opponent1").value,
+//         opponent_2= document.getElementById("opponent2").value,
+//         usScore = 0, themScore = 0, greenMultiplier = 1, purpleMultiplier = 1, orangeMultiplier = 1;
+
+//     if (autonWinner === "us") {
+//          usScore += auton_bonus;
+//     } else if (autonWinner === "them") {
+//         themScore += auton_bonus;
+//     }
+
+//     greenMultiplier += greenTowers;
+//     purpleMultiplier += purpleTowers;
+//     orangeMultiplier += orangeTowers;
+
+//     usScore += (usGreenCount * greenMultiplier) + (usPurpleCount * purpleMultiplier) + (usOrangeCount * orangeMultiplier);
+//     themScore += (themGreenCount * greenMultiplier) + (themPurpleCount * purpleMultiplier) + (themOrangeCount * orangeMultiplier);
+    
+//     document.getElementById("scoreUs").innerHTML = usScore.toString();
+//     document.getElementById("scoreThem").innerHTML = themScore.toString();
+
+
+// }

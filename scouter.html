@@ -34,6 +34,18 @@
         <label for="auton">Autonomous Points: </label>
         <input type="number" name="auton" id="auton">
         <br>
+        <label for="autonComments">Autonomous Comments: </label>
+        <input type="text" name="autonComments" class="comments" id="autonComments">
+        <br>
+        <label for="type">Type Of Bot: </label>
+        <select id="type">
+            <option value="Tray">Tray</option>
+            <option value="Lift Only">Lift Only</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Push Bot">Push Bot</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
         <label for="maxStack">Average Stack Height: </label>
         <input type="number" name="maxStack" id="maxStack">
         <br>
@@ -102,35 +114,37 @@
         <br>
         <div class="row">
             <div class="buttonColumn">
-                <button type="button" class="button add" onclick="GoDown('greenTowerCount')">-</button>
+                <button type="button" class="button add" onclick="GoDown('greenTowerCount', 'greenTowerCount', 'purpleTowerCount', 'orangeTowerCount')">-</button>
             </div>
             <div class="buttonColumn">
-                <button type="button" class="button add" onclick="GoUp('greenTowerCount')">+</button>
+                <button type="button" class="button add" onclick="GoUp('greenTowerCount', 'greenTowerCount', 'purpleTowerCount', 'orangeTowerCount')">+</button>
             </div>
             <div class="buttonColumn">
-                <button type="button" class="button add" onclick="GoDown('purpleTowerCount')">-</button>
+                <button type="button" class="button add" onclick="GoDown('purpleTowerCount', 'greenTowerCount', 'purpleTowerCount', 'orangeTowerCount')">-</button>
             </div>
             <div class="buttonColumn">
-                <button type="button" class="button add" onclick="GoUp('purpleTowerCount')">+</button>
+                <button type="button" class="button add" onclick="GoUp('purpleTowerCount', 'greenTowerCount', 'purpleTowerCount', 'orangeTowerCount')">+</button>
             </div>
             <div class="buttonColumn">
-                <button type="button" class="button add" onclick="GoDown('orangeTowerCount')">-</button>
+                <button type="button" class="button add" onclick="GoDown('orangeTowerCount', 'greenTowerCount', 'purpleTowerCount', 'orangeTowerCount')">-</button>
             </div>
             <div class="buttonColumn">
-                <button type="button" class="button add" onclick="GoUp('orangeTowerCount')">+</button>
+                <button type="button" class="button add" onclick="GoUp('orangeTowerCount', 'greenTowerCount', 'purpleTowerCount', 'orangeTowerCount')">+</button>
             </div>
         </div>
+        <br>
+        <label for="driverSkill">Driver Skill /10: </label>
+        <input type="number" name="driverSkill" id="driverSkill">
         <br>
         <label for="score">Final Score: </label>
         <input type="number" name="score" id="score">
         <br>
         <label for="comments">Comments: </label>
-        <input type="text" name="comments" id="comments">
+        <input type="text" name="comments" class="comments" id="comments">
         <br>
         <label for="scouterName">Scouted By: </label>
         <input type="text" name="scouterName" id="scouterName">
         <br>
-
     </form>
     <div class="submit"><button class="button" onclick="calculate()">Complete</button></div>
 

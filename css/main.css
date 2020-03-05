@@ -20,11 +20,11 @@ h3 {
 
 
 img {
-    width: 20%;
-    height: auto;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    height: 150px;
+    width: auto;
 }
 
 form {
@@ -69,6 +69,10 @@ input[type=number] {
 
 .big {
     font-size: 30px;
+}
+
+.big.width {
+    width: 90%;
 }
 
 add.big, input[type=number].big{
@@ -136,7 +140,7 @@ text-align: center;
     color: #8C0303;
 }
 
-#comments {
+.comments {
     width: 50%;
 }
 
@@ -164,11 +168,6 @@ text-align: center;
     padding: 5px;
 }
 
-img {
-    height: 150px;
-    width: auto;
-}
-
 .row.red {
     background-color: #D6252F;
     border-radius: 38px;
@@ -177,4 +176,46 @@ img {
 .row.blue {
     background-color: #0676C8;
     border-radius: 38px;
+}
+
+.greenButton {
+    background-color: #089134;
+    border-color: #089134;
+}
+
+.purpleButton {
+    background-color: #5F289C;
+    border-color: #5F289C;
+}
+
+.orangeButton {
+    background-color: #FF6510;
+    border-color: #FF6510;
+}
+
+#home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#switcher {
+    font-size: 100px;
+}
+
+#robot {
+    color: aliceblue;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#strategies {
+    color: whitesmoke;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.math {
+    width: 50%;
+    height: auto;
 }
