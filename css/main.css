@@ -103,8 +103,11 @@ add.big, input[type=number].big{
 
 .button.add {
     padding: 0 0;
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
+    font-size: 50px;
+    text-align: center;
+
 }
 
 .button.add.big {
@@ -113,6 +116,8 @@ add.big, input[type=number].big{
     width: 100px;
     font-size: 69px;
     font-size: 69px;
+    font-weight: bold;
+
 }
 
 .submit {
